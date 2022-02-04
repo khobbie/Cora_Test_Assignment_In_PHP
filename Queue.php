@@ -24,7 +24,7 @@ class Queue
         if ($this->checkIfUserExistInUsers($user)) {
             return array_search(trim($user), $this->users);
         } else {
-            print_r("<br><br>User does not exit");
+            print_r("<br><br>User ($user) does not exit");
             // return ;
         }
     }
@@ -36,7 +36,7 @@ class Queue
             return $user = $this->users[$position];
            // return array_search(trim($user), $this->users);
         } else {
-            print_r("<br><br>User does not exit");
+            print_r("<br><br>User position ($position) does not exit");
             // return ;
         }
     }
@@ -103,7 +103,7 @@ class Queue
             if ($position == 0) {
                 array_splice($this->users, $position, 1);
             } else {
-                print_r("<br><br>Can not remove user which is not in the first position");
+                print_r("<br><br>Can not remove user position ($position) which is not in the first position");
             }
         }else{
             print_r("<br><br>Position ($position) does not exit");
